@@ -1,0 +1,60 @@
+.centered {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    text-align: center;
+    background-color: gray;
+
+    width: 100vw;
+}
+
+header {
+    background: white;
+    border-radius: 0 0 50px 50px;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.05);
+    overflow: visible;
+    background: linear-gradient(90deg,#2980b9, #8e44ad);
+
+}
+
+header h2{
+    font-size: large;
+    
+}
+
+.btns {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    height: fit-content;
+    margin-top: 60px;
+    overflow: visible;
+}
+
+
+.btns button {
+    position: relative;
+    width: 100px;
+    height: 100px;
+
+    margin: 5px;
+    border-radius: 50%;
+    border: none;
+
+    cursor: pointer;
+
+    transition: all 0.3s;
+}
+
+.btns button:hover{
+    background-color: green;
+}
+
+.history {
+    height: 80%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: gray;
+}

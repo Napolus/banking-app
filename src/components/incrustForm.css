@@ -1,0 +1,30 @@
+.incrust {
+    width:fit-content;
+    height: fit-content;
+    padding: 10px;
+}
+
+.methodOfPay {
+    margin: 15px 0 15px 0;
+}
+
+.methodOfPay label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+select {
+    outline: none;
+    width: 100%;
+    font-size: 1.4rem;
+    padding: .3rem .5rem;
+    border-radius: 3px;
+}
+
+.numberIndicator {
+    margin-bottom: 15px;
+}
+
+.incrust>form>input[type="submit"] {
+    margin-bottom: 15px;
+}
