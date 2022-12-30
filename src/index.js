@@ -9,10 +9,13 @@ import reportWebVitals from './reportWebVitals';
 
 const container = document.getElementById('root');
 
+ var base='/';
+ base=base.substring(0,base.length-1)
+
 const root = createRoot(container); // createRoot(container!) if you use TypeScript
 root.render(
-  <BrowserRouter>
-    <App />
+  <BrowserRouter basename={base}>
+    <App base_url={base}/>
   </BrowserRouter>
 );
 

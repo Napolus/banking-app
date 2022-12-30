@@ -4,6 +4,7 @@ import axios from 'axios';
 import './LoginPage.css';
 import { Logo } from './Logo';
 
+
 class LoginPage extends Component {
 
   state = {
@@ -43,7 +44,7 @@ class LoginPage extends Component {
   render() {
 
     if (this.props.get_info().valid) {
-      return <Navigate replace to="/dashboard" />
+      return <Navigate replace to='./dashboard' />
     } else {
       return (
         <div className="login-page">
@@ -64,7 +65,7 @@ class LoginPage extends Component {
               <div className="pass">Forgot Password?</div>
               <input type="submit" value="Login" />
               <div className="signup_link">
-                Not a member? <Link to="/register">Signup</Link>
+                Not a member? <Link to='/register'>Signup</Link>
               </div>
             </form>
           </div>

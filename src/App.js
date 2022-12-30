@@ -20,10 +20,11 @@ class App extends Component {
     balance: 0.0,
   }
 
+  
   constructor(props) {
 
+    
     super(props);
-
     setInterval(() => {
       if (this.state.valid) {
         var username = this.state.username;
@@ -84,16 +85,19 @@ class App extends Component {
     return this.state;
   }
 
+   
+
   render() {
+    
     return (
       <div className='App'>
         <Routes>
-          <Route index element={<LoginPage on_login={this.onLogin} get_info={this.getInfo} />} />
-          <Route path='/register' element={<RegisterPage on_register={this.onRegister} get_info={this.getInfo} />} />
-          <Route path='/dashboard' element={<Dashboard on_logout={this.onLogout} get_info={this.getInfo} />}>
-            <Route path='/dashboard/deposit' element={<DepositForm on_deposit={this.onDeposit} get_info={this.getInfo} />} />
-            <Route path='/dashboard/withdraw' element={<WithdrawForm on_withdraw={this.onWithdraw} get_info={this.getInfo} />} />
-            <Route path='/dashboard/transfer' element={<TransferForm on_transfer={this.onTransfer} get_info={this.getInfo} />} />
+          <Route path={this.props.base_url+"/"} element={<LoginPage  on_login={this.onLogin} get_info={this.getInfo} />} />
+          <Route path={this.props.base_url+"/register"} element={<RegisterPage  on_register={this.onRegister} get_info={this.getInfo} />} />
+          <Route path={this.props.base_url+"/dashboard"} element={<Dashboard on_logout={this.onLogout} get_info={this.getInfo} />}>
+            <Route path={this.props.base_url+"/dashboard/deposit"} element={<DepositForm on_deposit={this.onDeposit} get_info={this.getInfo} />} />
+            <Route path={this.props.base_url+"/dashboard/withdraw"} element={<WithdrawForm on_withdraw={this.onWithdraw} get_info={this.getInfo} />} />
+            <Route path={this.props.base_url+"/dashboard/transfer"} element={<TransferForm on_transfer={this.onTransfer} get_info={this.getInfo} />} />
           </Route>
         </Routes>
       </div>
